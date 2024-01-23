@@ -26,9 +26,9 @@ function healthy2 () {
 function redirect () {
     window.location.href = "index.html";
 }
-
-buttonMeat.addEventListener("click" , sad1);
 }
+buttonMeat.addEventListener("click" , sad1);
+
 function sad1 () {
 image.setAttribute("src", "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fG1lYXR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60");
 text.textContent = "Hmm , one question ...  ";
@@ -42,7 +42,11 @@ function sad2 () {
     text.textContent = "You should consider adding more veggies in your diet !";
     buttonVeg.style = "display:none";
     buttonMeat.style = "display:none";
+    text.addEventListener("click", redirect);
 
+function redirect () {
+    window.location.href = "index.html";
+}
 }
 
 
